@@ -3,6 +3,7 @@ import pandas
 
 screen = turtle.Screen()
 screen.title("U.S States Game")
+screen.setup(width=725, height=500)
 image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
@@ -14,7 +15,7 @@ guessed_states = []
 
 while len(guessed_states) < 50:
     answer_state = (screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
-                                     prompt="What's another state's name?")).title()
+                                     prompt="Give a name of a state in U.S:")).title()
 
     if answer_state == "Exit":
         missing_states = []
